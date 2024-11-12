@@ -117,6 +117,14 @@ class App extends Component {
         this.setState({filter});
     }
 
+    updateStateData = (updatedData) => {
+        this.setState({ data: updatedData });
+    };
+
+	onTransferState = () => {
+		return this.state.data;
+	};
+
 	render() {
 		const { data, term, filter } = this.state;
 		const employees = this.state.data.length;
@@ -139,6 +147,8 @@ class App extends Component {
 					data={visibleData}
 					onDelete={this.deleteItem}
 					onToggleProp={this.onToggleProp}
+					onTransferState={this.onTransferState}
+					updateStateData={this.updateStateData}
 				/>
 				<EmployersAddForm onAdd={this.addItem} />
 			</div>
