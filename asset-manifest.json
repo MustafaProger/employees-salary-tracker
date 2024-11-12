@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/MustafaProger/employees-salary-tracker.git/static/css/main.2431ef52.css",
-    "main.js": "/MustafaProger/employees-salary-tracker.git/static/js/main.9253cb4d.js",
-    "static/js/453.ed3810f9.chunk.js": "/MustafaProger/employees-salary-tracker.git/static/js/453.ed3810f9.chunk.js",
-    "index.html": "/MustafaProger/employees-salary-tracker.git/index.html",
-    "main.2431ef52.css.map": "/MustafaProger/employees-salary-tracker.git/static/css/main.2431ef52.css.map",
-    "main.9253cb4d.js.map": "/MustafaProger/employees-salary-tracker.git/static/js/main.9253cb4d.js.map",
-    "453.ed3810f9.chunk.js.map": "/MustafaProger/employees-salary-tracker.git/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/employees-salary-tracker/static/css/main.2431ef52.css",
+    "main.js": "/employees-salary-tracker/static/js/main.09bde72a.js",
+    "static/js/453.ed3810f9.chunk.js": "/employees-salary-tracker/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/employees-salary-tracker/index.html",
+    "main.2431ef52.css.map": "/employees-salary-tracker/static/css/main.2431ef52.css.map",
+    "main.09bde72a.js.map": "/employees-salary-tracker/static/js/main.09bde72a.js.map",
+    "453.ed3810f9.chunk.js.map": "/employees-salary-tracker/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2431ef52.css",
-    "static/js/main.9253cb4d.js"
+    "static/js/main.09bde72a.js"
   ]
 }
