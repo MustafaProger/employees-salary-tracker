@@ -11,7 +11,7 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			data: [
+			data: JSON.parse(localStorage.getItem("data")) || [
 				{
 					fullname: "Mustafa Tojiev",
 					salary: 4000,
@@ -35,7 +35,7 @@ class App extends Component {
 				},
 			],
 			term: "",
-			filter: 'all'
+			filter: "all",
 		};
 	}
 
@@ -57,7 +57,7 @@ class App extends Component {
 				salary: salary,
 				increase: false,
 				rise: false,
-				id: data.length,
+				id: Math.floor(Math.random() * 1000000),
 			};
 
 			const newArr = [...data, newItem];
@@ -102,27 +102,40 @@ class App extends Component {
 		this.setState({ term });
 	};
 
-    filterPost = (items, filter) => {
-        switch (filter) {
-            case 'rise':
-                return items.filter(item => item.rise);
-            case 'moreThen1000':
-                return items.filter(item => item.salary > 1000);
-            default:
-                return items
-        }
-    }
+	filterPost = (items, filter) => {
+		switch (filter) {
+			case "rise":
+				return items.filter((item) => item.rise);
+			case "moreThen1000":
+				return items.filter((item) => item.salary > 1000);
+			default:
+				return items;
+		}
+	};
 
-    onFilterSelect = (filter) => {
-        this.setState({filter});
-    }
+	onFilterSelect = (filter) => {
+		this.setState({ filter });
+	};
 
-    updateStateData = (updatedData) => {
-        this.setState({ data: updatedData });
-    };
+	updateStateData = (updatedData) => {
+		this.setState({ data: updatedData });
+	};
 
 	onTransferState = () => {
 		return this.state.data;
+	};
+
+	// Сохраняем `data` в localStorage при каждом обновлении
+	componentDidUpdate(prevProps, prevState) {
+		if (prevState.data !== this.state.data) {
+			localStorage.setItem("data", JSON.stringify(this.state.data));
+		}
+	}
+
+	addNewEmployee = (newEmployee) => {
+		this.setState({
+			data: [...this.state.data, newEmployee],
+		});
 	};
 
 	render() {
@@ -141,7 +154,10 @@ class App extends Component {
 				/>
 				<div className='search-panel'>
 					<SearchPanel onUpdateSearch={this.onUpdateSearch} />
-					<AppFilter filter={filter} onFilterSelect={this.onFilterSelect}/>
+					<AppFilter
+						filter={filter}
+						onFilterSelect={this.onFilterSelect}
+					/>
 				</div>
 				<EmployersList
 					data={visibleData}
