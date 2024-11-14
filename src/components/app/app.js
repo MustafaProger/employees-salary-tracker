@@ -5,6 +5,7 @@ import SearchPanel from "../search-panel/search-panel";
 import AppFilter from "../app-filter/app-filter";
 import EmployersList from "../employers-list/employers-list";
 import EmployersAddForm from "../employers-add-form/employers-add-form";
+import Rules from "../app-rules/app-rules";
 import "./app.css";
 
 class App extends Component {
@@ -36,6 +37,7 @@ class App extends Component {
 			],
 			term: "",
 			filter: "all",
+			isOpen: true,
 		};
 	}
 
@@ -138,6 +140,19 @@ class App extends Component {
 		});
 	};
 
+	onTransferStateModal = () => {
+		return this.state.isOpen;
+	};
+
+	openModal = () => {
+		document.body.classList.add('no-scroll');
+		this.setState({ isOpen: true })
+	};
+	closeModal = () => {
+		document.body.classList.remove('no-scroll');
+		this.setState({ isOpen: false });
+	} 
+
 	render() {
 		const { data, term, filter } = this.state;
 		const employees = this.state.data.length;
@@ -167,6 +182,12 @@ class App extends Component {
 					updateStateData={this.updateStateData}
 				/>
 				<EmployersAddForm onAdd={this.addItem} />
+
+				<Rules
+					openModal={this.openModal}
+					closeModal={this.closeModal}
+					onTransferStateModal={this.onTransferStateModal}
+				/>
 			</div>
 		);
 	}

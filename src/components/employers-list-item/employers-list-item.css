@@ -73,11 +73,16 @@
     display: flex;
 }
 
+.btn-trash,
+.btn-cookie {
+    background: none;
+}
+
 input {
     width: 150px;
 }
 
-@media(max-width: 425px) {
+@media(max-width: 500px) {
     .list-group-salary_btns {
         align-items: start;
     }
