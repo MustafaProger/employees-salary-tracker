@@ -1,3 +1,18 @@
 .btn-group {
-    margin-top: 25px;
+	margin-top: 25px;
+}
+
+@media (max-width: 425px) {
+	.btn-group {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.my_style {
+		padding: 10px 20px;
+		border-radius: 7px !important;
+        border: none;
+        margin: 5px 0 !important;
+        display: block !important;
+}
 }

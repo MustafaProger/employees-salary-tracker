@@ -1,17 +1,21 @@
 .list-group-item {
     padding: 15px 20px;
     border-bottom: 1px solid #3d5a80;
+    align-items: center;
+
 }
 
 .list-group-item:last-child {
     border-bottom: none;
+
 }
 
 .list-group-item span {
     line-height: 35px;
     font-size: 20px;
     cursor: pointer;
-    min-width: 550px;
+    min-width: 100px;
+
 }
 
 .list-group-item input {
@@ -19,6 +23,7 @@
     font-size: 20px;
     text-align: center;
     border: 0;
+
 }
 
 .list-group-item button {
@@ -63,3 +68,28 @@
     color: #aeaeae;
 }
   
+
+.list-group-salary_btns {
+    display: flex;
+}
+
+input {
+    width: 150px;
+}
+
+@media(max-width: 425px) {
+    .list-group-salary_btns {
+        align-items: start;
+    }
+
+    input {
+        width: 100px;
+    }
+}
+
+@media(max-width: 375px) {
+    .list-group-salary_btns {
+        flex-direction: column;
+    }
+
+}

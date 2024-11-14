@@ -13,6 +13,15 @@
 }
 
 .add-form input {
-    width: 350px;
     margin-right: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+    .app-add-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 }

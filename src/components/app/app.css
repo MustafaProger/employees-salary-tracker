@@ -1,4 +1,15 @@
 .app {
     margin: 0 auto;
     max-width: 1000px;
+    padding: 0 20px;
+}
+
+.app-info span {
+    font-weight: 900;
+}
+
+@media(max-width: 425px) {
+    .app {
+        padding: 0 10px;
+    }
 }
