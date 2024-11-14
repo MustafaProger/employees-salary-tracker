@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/employees-salary-tracker/static/css/main.23b141e4.css",
+    "main.css": "/employees-salary-tracker/static/css/main.88f11820.css",
     "main.js": "/employees-salary-tracker/static/js/main.1edf295b.js",
     "static/js/453.ed3810f9.chunk.js": "/employees-salary-tracker/static/js/453.ed3810f9.chunk.js",
     "index.html": "/employees-salary-tracker/index.html",
-    "main.23b141e4.css.map": "/employees-salary-tracker/static/css/main.23b141e4.css.map",
+    "main.88f11820.css.map": "/employees-salary-tracker/static/css/main.88f11820.css.map",
     "main.1edf295b.js.map": "/employees-salary-tracker/static/js/main.1edf295b.js.map",
     "453.ed3810f9.chunk.js.map": "/employees-salary-tracker/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.23b141e4.css",
+    "static/css/main.88f11820.css",
     "static/js/main.1edf295b.js"
   ]
 }
